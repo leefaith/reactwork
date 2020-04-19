@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./common/react.min.js"></script>
+    <script src="./common/react-dom.min.js"></script>
+    <script src="http://cdn.bootcss.com/babel-core/5.8.38/browser.min.js"></script>
+
+</head>
+<body>
+    <div id="demo"></div>
+    <div id="demo"></div>
+    <script type="text/babel">
+      var  MyForm = React.createClass({
+    handleChange:function(){
+        var inputValue=ReactDOM.findDOMNode(this.refs.jspang).value;
+        console.log(inputValue);
+    },
+    render:function(){
+        return(
+            <div>
+                <input type="text" onChange={this.handleChange} ref="jspang" defaultValue='jspang'/>
+            </div>
+        )
+    }
+});
+
+       ReactDOM.render(<MyForm/>,document.getElementById('demo'))
+
+    </script>
+</body>
+</html>

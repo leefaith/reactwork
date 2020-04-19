@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./common/react.min.js"></script>
+    <script src="./common/react-dom.min.js"></script>
+</head>
+<body>
+    <div id="reactContainer"></div>
+    <script>
+        // 核心逻辑
+     var HelloComponent =React.createClass({
+         render:function(){
+             return React.createElement('h1',null,'Hello world');
+         }
+     });
+     //DOM渲染+更新逻辑
+     ReactDOM.render(
+         React.createElement(HelloComponent,null),
+         document.getElementById('reactContainer')
+     )
+ </script>
+</body>
+</html>
